@@ -18,11 +18,11 @@ Tank_params = {
     "rho": 1000,
     "height": 10,
     "radius": 5,
-    "max_lvl": 0.75,
-    "min_lvl": 0.25,
+    "max_lvl": 0.65,
+    "min_lvl": 0.35,
     "int_lvl": 0.5,
     "disturbance": True,
-    "connected_tank": False,
+    "connected_tank": True,
     "pipe_radius": 0.25,
 }
 

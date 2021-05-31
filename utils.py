@@ -26,7 +26,7 @@ class RewardTracker:
         # self.ts = time.time()
         mean_reward = np.mean(self.total_rewards[-100:])
         
-        if len(self.total_rewards) % 50 == 0:
+        if len(self.total_rewards) % 500 == 0:
             print(
                 " done %d games, mean reward %.3f "
                 % (len(self.total_rewards), mean_reward)
@@ -38,6 +38,8 @@ class RewardTracker:
         if mean_reward > self.stop_reward:
             print("Solved !")
             return True
+        if len(self.total_rewards) > 500000:
+            return False
         return False
 
 
